@@ -50,3 +50,26 @@ const projects = [
     });
   });
   
+  // Fonction pour animer les barres de compétence
+const animateSkills = () => {
+  const skillBars = document.querySelectorAll('.skill-fill');
+  skillBars.forEach(bar => {
+    const level = bar.getAttribute('data-level'); // Niveau de compétence (0 à 10)
+    const percentage = (level / 10) * 100; // Convertir en pourcentage
+    bar.style.width = `${percentage}%`; // Définir la largeur
+  });
+};
+
+// Observer si la section Compétences est visible
+const skillsSection = document.querySelector('#skills');
+const observer = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      animateSkills();
+      observer.disconnect(); // Stopper l'observation une fois l'animation déclenchée
+    }
+  },
+  { threshold: 0.5 } // Déclencher lorsque 50% de la section est visible
+);
+
+observer.observe(skillsSection);
