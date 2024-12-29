@@ -2,100 +2,140 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Jordan Sicre</title>
-    <link rel="stylesheet" href="src/styles/main.min.css">
-    <script src="https://kit.fontawesome.com/50bd61e104.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Jordan Sicre</title>
+  <link rel="stylesheet" href="src/styles/main.min.css">
+  <script src="https://kit.fontawesome.com/50bd61e104.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Jordan Sicre</h1>
-            <ul>
-                <li><a href="#about">Présentation</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="content-wrapper">
+      <nav class="nav">
+        <h1 class="logo">Jordan Sicre</h1>
+        <ul class="nav-links">
+          <li><a href="#about">Présentation</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="about" class="about">
-            <h2>À propos</h2>
-            <div class="about-content">
-                <img src="src/assets/images/your-photo.webp" alt="Jordan Sicre">
-                <p>Je suis Jordan Sicre, en formation intégrateur web, passionné par la création de sites modernes et
-                    interactifs.</p>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-          <h2>Projets</h2>
-          <div class="project-gallery">
-            <!-- Projets générés dynamiquement via JavaScript -->
+  <main>
+    <section id="about" class="about">
+      <div class="content-wrapper">
+        <div class="about-content">
+          <img src="src/assets/images/your-photo.webp" alt="Jordan Sicre">
+          <div class="about-text">
+          <h2>À propos</h2>
+          <p>Je suis actuellement en fin de formation de développeur web Frontend Javascript/React chez OpenClassRooms.
+            J'ai travaillé sur des projets de formation et des projets personnels. J'ai une passion pour le
+            développement. J'aime apprendre de nouvelles technologies et améliorer mes compétences en programmation.</p>
           </div>
-        </section>
-        
+        </div>
+      </div>
+    </section>
 
-        <section id="skills" class="skills">
-            <h2>Compétences</h2>
-            <div class="skill">
-              <span>HTML5</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-level="9"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>CSS3 / SCSS</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-level="8"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>JavaScript</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-level="7"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Git / GitHub</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-level="6"></div>
-              </div>
-            </div>
-          </section>
-          
-          <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-              <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p>
-              <p><strong>Email :</strong> <a href="mailto:jordan.sicre@example.com">jordan.sicre@example.com</a></p>
-              <div class="social-links">
-                <a href="https://github.com/jordansicre" target="_blank" aria-label="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/jordansicre" target="_blank" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/jordansicre" target="_blank" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </section>        
-          
-    </main>
+    <section id="projects" class="projects">
+      <div class="content-wrapper">
+        <h2>Projets</h2>
+        <div class="project-gallery">
+          <!-- Projets générés dynamiquement via JavaScript -->
+        </div>
+      </div>
+    </section>
 
 
-    <footer>
-        <p>&copy; 2024 Jordan Sicre. Tous droits réservés.</p>
-    </footer>
+    <section id="skills" class="skills">
+      <div class="content-wrapper">
+        <h2>Compétences</h2>
+        <div class="skill">
+          <span>HTML5</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="9"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>CSS3 / SCSS</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="9"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="7"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>React</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="6"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Redux</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="6"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Git / GitHub</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="7"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Linux / Windows</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-level="9"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="src/js/main.js"></script>
+    <section id="contact" class="contact">
+      <div class="content-wrapper">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p>
+          <p><strong>Email :</strong> <a href="mailto:jordan.sicre@example.com">jordan.sicre@example.com</a></p>
+          <div class="social-links">
+            <a href="https://github.com/jordansicre" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/jordansicre" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/jordansicre" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="content-wrapper">
+    <p>&copy; 2024 Jordan Sicre. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">
+    ↑
+  </button>
+
+  <script src="src/js/main.js"></script>
+  
 </body>
 
 </html>

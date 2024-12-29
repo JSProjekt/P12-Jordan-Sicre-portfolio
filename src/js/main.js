@@ -1,74 +1,74 @@
 const projects = [
   {
     id: 1,
-    title: "Projet 1",
-    image: "src/assets/images/project1.jpg",
+    title: "Riding Cities",
+    image: "src/assets/images/projets/projet1.webp",
     description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    technologies: ["HTML"],
+    github: "https://github.com/JSProjekt/Projet_2_Sicre_Jordan"
   },
   {
     id: 2,
-    title: "Projet 2",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "Booki",
+    image: "src/assets/images/projets/projet2.webp",
+    description: "À partir d'une maquette Figma, j'ai développé une landing page et implémenté les media queries pour la compatibilité avec les versions tablette et mobile.",
+    technologies: ["HTML", "CSS"],
+    github: "https://github.com/JSProjekt/Projet_3_Sicre_Jordan"
   },
   {
     id: 3,
-    title: "Projet 3",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "Ohmyfood",
+    image: "src/assets/images/projets/projet3.webp",
+    description: "À partir d'une maquette Figma et l'utilisation du concept mobile first, j'ai créé une page d'accueil, plusieurs pages de menus et intégré un élément de chargement.",
+    technologies: ["HTML", "CSS", "SASS"],
+    github: "https://github.com/JSProjekt/Openclassrooms_P4_ohmyfood"
   },
   {
     id: 4,
-    title: "Projet 4",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
+    title: "Print it!",
+    image: "src/assets/images/projets/projet4.webp",
+    description: "Ici j'ai fait l'intégration d'un carrousel sur un site.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    github: "https://github.com/JSProjekt/Openclassrooms_P5_Print_it"
   },
   {
     id: 5,
-    title: "Projet 5",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "Sophie Bluel",
+    image: "src/assets/images/projets/projet5.webp",
+    description: "En partant d'une maquette conçue sur Figma, j'ai développé une page de connexion et mis en place l'affichage dynamique des travaux dans le portfolio via une API. J'ai intégré une modale permettant à l'administrateur du site d'ajouter ou de supprimer des travaux, conformément aux exigences du projet.",
+    technologies: ["HTML", "CSS","SASS", "JavaScript"],
+    github: "https://github.com/JSProjekt/Openclassrooms_P6_SophieBluel"
   },
   {
     id: 6,
-    title: "Projet 6",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "Nina Carducci",
+    image: "src/assets/images/projets/projet6.webp",
+    description: "Ma mission était d'optimiser le site web, d'améliorer son référencement SEO, et de générer un rapport sur les optimisations effectuées.",
+    technologies: ["SEO", "Lighthouse", "Minifier"],
+    github: "https://github.com/JSProjekt/ninacarducci-P8"
   },
   {
     id: 7,
-    title: "Projet 7",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "Kasa",
+    image: "src/assets/images/projets/projet7.webp",
+    description: "J'ai effectué la refonte d'un site d'agence immobilière. Avec l'aide d'une maquette Figma et d'un fichier JSON pour intégrer les données sur le site.",
+    technologies: ["HTML", "CSS","SASS", "JavaScript","React"],
+    github: "https://github.com/JSProjekt/kasa"
   },
   {
     id: 8,
-    title: "Projet 8",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jordansicre/projet1"
+    title: "ArgentBank",
+    image: "src/assets/images/projets/projet8.webp",
+    description: "J'ai du réaliser l'intégration du système d'authentification avec Redux Toolkit et établir un mécanisme de transaction conforme avec un Swagger.",
+    technologies: ["HTML", "CSS", "JavaScript","React","Redux"],
+    github: "https://github.com/JSProjekt/P10-argentBank"
   },
   {
     id: 9,
-    title: "Projet 9",
-    image: "src/assets/images/project1.jpg",
-    description: "Un site vitrine pour une entreprise locale.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    title: "FakeOS mobile GTA rp",
+    image: "src/assets/images/projets/projet9.webp",
+    description: "réaliser un faux téléphone mobile pour serveur gta rp",
+    technologies: ["HTML", "CSS","SASS","JavaScript","React, NextJS ou VueJS"],
     github: "https://github.com/jordansicre/projet1"
   }
 ];
@@ -204,3 +204,24 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(skillsSection);
+
+// Sélectionne le bouton
+const backToTopButton = document.getElementById('back-to-top');
+
+// Affiche le bouton uniquement lorsque la page est défilée
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Seuil à partir duquel le bouton apparaît
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+});
+
+// Scroll l'utilisateur en haut de la page lorsqu'il clique sur le bouton
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Défilement fluide
+  });
+});
+
