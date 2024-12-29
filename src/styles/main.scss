@@ -1,6 +1,5 @@
 @use './variables' as *;
 
-// Styles globaux
 body {
   font-size: 1rem;
   font-family: Arial, sans-serif;
@@ -25,18 +24,14 @@ pre {
 .content-wrapper {
   margin: 0 auto;
   max-width: 1200px;
-  /* Largeur maximale pour centrer le contenu */
   padding: 0 1rem;
-  /* Espacement par défaut pour petits écrans */
 
   @media (min-width: 1080px) {
     padding: 0 2rem;
-    /* Augmente les marges sur les grands écrans */
   }
 
   @media (min-width: 1440px) {
     padding: 0 4rem;
-    /* Marges encore plus grandes pour très grands écrans */
   }
 }
 
@@ -47,23 +42,20 @@ pre {
 .contact,
 .footer {
   background-size: cover;
-  /* Conserve l'arrière-plan */
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .header {
   background: #333;
-  /* Couleur de fond */
-  color: white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   padding: 1rem 2rem;
 
   .nav {
     display: flex;
     align-items: center;
-    /* Aligne les éléments verticalement */
     justify-content: space-between;
-    /* Place le logo à gauche et les liens à droite */
   }
 
   .logo {
@@ -73,24 +65,21 @@ pre {
 
   .nav-links {
     list-style: none;
-    /* Supprime les puces */
     display: flex;
-    /* Aligne les liens horizontalement */
     gap: 1.5rem;
-    /* Espacement entre les liens */
     margin: 0;
     transition: all 0.3s ease-in-out;
 
     li {
       a {
-        color: white;
+        color: whitesmoke;
+        text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
         text-decoration: none;
         font-size: 1rem;
         transition: color 0.3s;
 
         &:hover {
           color: #4CAF50;
-          /* Couleur au survol */
         }
       }
     }
@@ -98,17 +87,12 @@ pre {
 
   @media (max-width: 768px) {
     flex-direction: column;
-    /* Passe en colonne sur mobile */
     align-items: center;
-    /* Centre les éléments */
 
     .nav-links {
       flex-direction: column;
-      /* Liste verticale */
       align-items: center;
-      /* Centre les liens */
       gap: 1rem;
-      /* Ajuste l'espacement entre les liens */
       padding: 0;
 
       li {
@@ -118,9 +102,7 @@ pre {
 
         a {
           text-transform: uppercase;
-          /* Transforme le texte en majuscules */
           text-align: center;
-          /* Centre le texte */
         }
       }
     }
@@ -134,12 +116,11 @@ pre {
   }
 }
 
-// Sections
 section {
 
   padding: 2rem;
-  color: white;
-  /* Assurez-vous que le texte est lisible */
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   text-align: center;
 
   &.about {
@@ -175,7 +156,6 @@ section {
 
   .about-text {
     text-align: center;
-    /* Centrage du texte sur mobile */
   }
 
   p {
@@ -187,24 +167,17 @@ section {
 
   @media (min-width: 768px) {
     flex-direction: row;
-    /* Aligne les éléments horizontalement sur desktop */
     align-items: flex-start;
-    /* Aligne le texte avec le haut de l'image */
     text-align: left;
-    /* Aligne le texte à gauche */
 
     img {
       flex: 1;
-      /* L'image occupe une partie de l'espace */
       max-width: 300px;
-      /* Augmente légèrement la taille pour desktop */
     }
 
     .about-text {
       flex: 2;
-      /* Le texte occupe plus d'espace que l'image */
       padding-left: 2rem;
-      /* Ajoute un espace entre l'image et le texte */
     }
   }
 }
@@ -212,7 +185,6 @@ section {
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Toujours 3 colonnes */
   gap: 1.5rem;
   justify-items: center;
   margin-bottom: 1rem;
@@ -246,9 +218,9 @@ section {
 .show-more {
   display: block;
   margin: 0 auto;
-  /* Centre le bouton */
   background: #4CAF50;
-  color: white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   border: none;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -261,7 +233,6 @@ section {
   }
 }
 
-
 .modal {
   display: none;
   position: fixed;
@@ -272,7 +243,8 @@ section {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  color: white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
 }
 
 .modal-content {
@@ -330,7 +302,8 @@ section {
     align-self: flex-end;
     padding: 0.5rem 1rem;
     background: #4CAF50;
-    color: white;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -349,11 +322,12 @@ section {
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-align: left;
-    color: white;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   }
 
   .skill-bar {
-    background: #e0e0e0;
+    background: whitesmoke;
     border-radius: 10px;
     overflow: hidden;
     height: 20px;
@@ -363,39 +337,35 @@ section {
       background: $primary-color;
       height: 100%;
       width: 0;
-      /* Initialement vide */
       border-radius: 10px;
       transition: width 1s ease-in-out;
-      /* Animation de remplissage */
     }
   }
 }
 
 .contact-info {
   display: flex;
-  flex-direction: column; /* Empile les éléments verticalement */
-  align-items: center; /* Centre les éléments horizontalement */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 
   a {
-    color: white;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
     text-decoration: none;
     font-size: 2rem;
-    /* Taille des icônes */
     margin: 0 1rem;
     transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.2);
-      /* Animation au survol */
       color: $primary-color;
-      /* Changez la couleur au survol */
     }
   }
   p, a {
-    word-wrap: break-word; /* Permet de couper les mots trop longs */
-    overflow-wrap: break-word; /* Coupe les mots sur plusieurs lignes */
-    max-width: 100%; /* S'assure que le contenu reste dans les limites de l'écran */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
     margin: 0.5rem 0;
   }
   .social-links {
@@ -408,14 +378,16 @@ section {
 
 .footer {
   background: #333;
-  color: white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   padding: 1rem 0;
   text-align: center;
 }
 
 button {
   background: $primary-color;
-  color: white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -429,49 +401,33 @@ button {
 .back-to-top {
   position: fixed;
   bottom: 20px;
-  /* Distance du bas de la fenêtre */
   right: 20px;
-  /* Distance de la droite de la fenêtre */
   width: 50px;
-  /* Largeur du bouton */
   height: 50px;
-  /* Hauteur du bouton */
   background-color: #4CAF50;
-  /* Couleur de fond */
-  color: white;
-  /* Couleur du texte/icone */
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
   border: none;
   border-radius: 50%;
-  /* Bouton circulaire */
   display: flex;
-  /* Active Flexbox */
   align-items: center;
-  /* Centre verticalement */
   justify-content: center;
-  /* Centre horizontalement */
   font-size: 1.5rem;
-  /* Taille de la flèche */
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Ombre légère */
   opacity: 0;
-  /* Masqué par défaut */
   visibility: hidden;
-  /* Non cliquable par défaut */
   transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s;
 }
 
 .back-to-top:hover {
   background-color: #45a049;
-  /* Couleur au survol */
 }
 
 .back-to-top.visible {
   opacity: 1;
-  /* Rendu visible */
   visibility: visible;
-  /* Rendu cliquable */
 }
 
 @media (min-width: 768px) {
@@ -484,21 +440,15 @@ button {
   }
 }
 
-  
-
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
-    /* Change la direction des éléments en colonne */
     align-items: flex-start;
-    /* Aligne les éléments à gauche */
   }
 
   .nav-links {
     flex-direction: column;
-    /* Les liens passent en colonne */
     gap: 1rem;
-    /* Espacement entre les liens */
   }
 
   .modal-content {
@@ -514,11 +464,10 @@ button {
     }
   }
   .contact-info a {
-    font-size: 1rem; /* Réduit la taille de la police */
+    font-size: 1rem;
   }
 }
 
-/* Ordinateur de bureau */
 @media (min-width: 1024px) {
   body {
     font-size: 1.2rem;

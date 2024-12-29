@@ -81,7 +81,7 @@ showMoreButton.textContent = 'Afficher plus';
 
 // Fonction pour afficher les projets
 function renderProjects() {
-  gallery.innerHTML = ''; // Réinitialise la galerie
+  gallery.innerHTML = '';
 
   // Affiche les projets visibles
   projects.slice(0, displayedCount).forEach(project => {
@@ -112,9 +112,9 @@ function renderProjects() {
 // Gestion des clics sur le bouton "Afficher plus / moins"
 showMoreButton.addEventListener('click', () => {
   if (displayedCount >= projects.length) {
-    displayedCount = 3; // Réduit à 3 projets
+    displayedCount = 3;
   } else {
-    displayedCount = projects.length; // Affiche tous les projets
+    displayedCount = projects.length;
   }
   renderProjects();
 });
@@ -185,9 +185,9 @@ document.querySelectorAll('.project').forEach(el => {
 const animateSkills = () => {
   const skillBars = document.querySelectorAll('.skill-fill');
   skillBars.forEach(bar => {
-    const level = bar.getAttribute('data-level'); // Niveau de compétence (0 à 10)
-    const percentage = (level / 10) * 100; // Convertir en pourcentage
-    bar.style.width = `${percentage}%`; // Définir la largeur
+    const level = bar.getAttribute('data-level');
+    const percentage = (level / 10) * 100;
+    bar.style.width = `${percentage}%`;
   });
 };
 
@@ -197,10 +197,10 @@ const observer = new IntersectionObserver(
   (entries) => {
     if (entries[0].isIntersecting) {
       animateSkills();
-      observer.disconnect(); // Stopper l'observation une fois l'animation déclenchée
+      observer.disconnect();
     }
   },
-  { threshold: 0.5 } // Déclencher lorsque 50% de la section est visible
+  { threshold: 0.5 }
 );
 
 observer.observe(skillsSection);
@@ -210,7 +210,7 @@ const backToTopButton = document.getElementById('back-to-top');
 
 // Affiche le bouton uniquement lorsque la page est défilée
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) { // Seuil à partir duquel le bouton apparaît
+  if (window.scrollY > 300) {
     backToTopButton.classList.add('visible');
   } else {
     backToTopButton.classList.remove('visible');
@@ -221,7 +221,7 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Défilement fluide
+    behavior: 'smooth'
   });
 });
 
