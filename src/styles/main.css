@@ -64,16 +64,49 @@ section.contact {
 }
 
 .project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Toujours 3 colonnes */
+  gap: 1.5rem;
+  justify-items: center;
+  margin-bottom: 1rem;
 }
-.project-gallery .project {
-  width: 30%;
+
+.project {
   background: white;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.project img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.show-more {
+  display: block;
+  margin: 0 auto; /* Centre le bouton */
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.show-more:hover {
+  background: #45a049;
 }
 
 .modal {
@@ -87,6 +120,63 @@ section.contact {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.modal-content .modal-image {
+  flex: 1;
+  max-width: 300px;
+}
+.modal-content .modal-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.modal-content .modal-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal-content .modal-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.modal-content .modal-details p {
+  margin: 0;
+  line-height: 1.6;
+}
+.modal-content .modal-details a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+.modal-content .modal-details a:hover {
+  text-decoration: underline;
+}
+.modal-content .close {
+  margin-top: 1rem;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-content .close:hover {
+  background: #45a049;
 }
 
 .skill {
@@ -157,6 +247,18 @@ button:hover {
   }
   header nav ul {
     flex-direction: row;
+  }
+}
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .modal-content .modal-image {
+    max-width: 100%;
+  }
+  .modal-content .modal-details {
+    text-align: center;
   }
 }
 /* Ordinateur de bureau */
