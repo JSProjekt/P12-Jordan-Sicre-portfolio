@@ -219,8 +219,6 @@ section.contact {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px rgb(0.2, 0.2, 0.2);
 }
 
 .modal-content {

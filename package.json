@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sass": "sass src/styles/main.scss src/styles/main.css",
-    "watch:sass": "sass --watch src/styles/main.scss:src/styles/main.css"
+    "watch:sass": "sass --watch src/styles/main.scss:src/styles/main.css",
+    "minify-js": "terser src/js/main.js -o src/js/main.min.js --compress --mangle"
   },
   "keywords": [],
   "author": "",
