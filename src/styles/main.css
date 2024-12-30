@@ -169,6 +169,11 @@ section.contact {
   justify-items: center;
   margin-bottom: 1rem;
 }
+@media (max-width: 540px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project {
   background: #333;
@@ -180,6 +185,7 @@ section.contact {
 }
 .project img {
   max-width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 .project h3 {
@@ -219,9 +225,13 @@ section.contact {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -333,7 +343,10 @@ section.contact {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  gap: 0.5rem;
+  gap: 2rem;
+}
+.contact-info .social-links a i {
+  font-size: 3rem;
 }
 
 .footer {
@@ -389,6 +402,12 @@ button:hover {
   visibility: visible;
 }
 
+@media (max-width: 540px) {
+  .modal-content {
+    max-width: 95%;
+    padding: 1rem;
+  }
+}
 @media (min-width: 768px) {
   body {
     font-size: 1.1rem;
