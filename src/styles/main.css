@@ -333,6 +333,16 @@
   transition: width 1s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .skill {
+    margin: 0 0 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .skill {
+    margin: 0 7rem 1.5rem;
+  }
+}
 .footer {
   background: #333;
   color: #f5f5f5;
