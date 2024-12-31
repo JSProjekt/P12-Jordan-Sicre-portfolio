@@ -226,6 +226,18 @@ section {
 @media (max-width: 768px) {
   .education-content {
     flex-direction: column;
+    margin: 0 1rem;
+  }
+  .education .education-content .education-item {
+    padding: 0.8rem;
+  }
+
+  .education .education-content .education-item h3 {
+    font-size: 1rem;
+  }
+
+  .education .education-content .education-item p {
+    font-size: 0.9rem;
   }
 }
 
