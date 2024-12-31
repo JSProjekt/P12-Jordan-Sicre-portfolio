@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    a {
+      color: $light-color;
+      text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
+      text-decoration: none;
+      font-size: 2rem;
+      margin: 0 1rem;
+      transition: transform 0.3s;
+  
+      &:hover {
+        transform: scale(1.2);
+        color: $primary-color;
+      }
+    }
+    p, a {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      margin: 0.5rem 0;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 2rem;
+      
+      a i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-info a {
+      font-size: 1rem;
+    }
+  }

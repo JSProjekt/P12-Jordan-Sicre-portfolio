@@ -1,0 +1,40 @@
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+  
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+  
+      img {
+        flex: 1;
+        max-width: 300px;
+      }
+  
+      .about-text {
+        flex: 2;
+        padding-left: 2rem;
+      }
+    }
+  }

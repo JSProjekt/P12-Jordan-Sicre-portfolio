@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+.skill {
+    margin-bottom: 1.5rem;
+  
+    span {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      color: $light-color;
+      text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
+    }
+  
+    .skill-bar {
+      background: $light-color;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+  
+      .skill-fill {
+        background: $primary-color;
+        height: 100%;
+        width: 0;
+        border-radius: 10px;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }

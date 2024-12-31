@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+.footer {
+    background: $secondary-color;
+    color: $light-color;
+    text-shadow: 2px 2px 4px rgba(0.2, 0.2, 0.2, 1);
+    padding: 1rem 0;
+    text-align: center;
+  }
