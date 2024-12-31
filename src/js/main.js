@@ -119,32 +119,35 @@ showMoreButton.addEventListener('click', () => {
   renderProjects();
 });
 
+// Fonction réutilisable pour afficher une modale
+function showModal(project) {
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-image">
+        <img src="${project.image}" alt="${project.title}">
+      </div>
+      <div class="modal-details">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <p><strong>Technologies :</strong> ${project.technologies.join(', ')}</p>
+        <a href="${project.github}" target="_blank">Voir sur GitHub</a>
+      </div>
+      <button class="close">Fermer</button>
+    </div>
+  `;
+  modal.style.display = 'flex';
+  modal.querySelector('.close').addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+}
+
 // Fonction pour attacher les événements de clic sur les projets
 function attachProjectClickEvents() {
   document.querySelectorAll('.project').forEach(el => {
     el.addEventListener('click', () => {
       const projectId = el.dataset.id;
       const project = projects.find(p => p.id == projectId);
-
-      // Affiche la modal
-      modal.innerHTML = `
-        <div class="modal-content">
-          <div class="modal-image">
-            <img src="${project.image}" alt="${project.title}">
-          </div>
-          <div class="modal-details">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <p><strong>Technologies :</strong> ${project.technologies.join(', ')}</p>
-            <a href="${project.github}" target="_blank">Voir sur GitHub</a>
-          </div>
-          <button class="close">Fermer</button>
-        </div>
-      `;
-      modal.style.display = 'flex';
-      modal.querySelector('.close').addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
+      showModal(project);
     });
   });
 }
@@ -156,30 +159,6 @@ renderProjects();
 const modal = document.createElement('div');
 modal.className = 'modal';
 document.body.appendChild(modal);
-
-document.querySelectorAll('.project').forEach(el => {
-  el.addEventListener('click', () => {
-    const project = projects.find(p => p.id == el.dataset.id);
-    modal.innerHTML = `
-  <div class="modal-content">
-    <div class="modal-image">
-      <img src="${project.image}" alt="${project.title}">
-    </div>
-    <div class="modal-details">
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <p><strong>Technologies :</strong> ${project.technologies.join(', ')}</p>
-      <a href="${project.github}" target="_blank">Voir sur GitHub</a>
-    </div>
-    <button class="close">Fermer</button>
-  </div>
-`;
-    modal.style.display = 'flex';
-    modal.querySelector('.close').addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-  });
-});
 
 // Fonction pour animer les barres de compétence
 const animateSkills = () => {
